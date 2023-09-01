@@ -24,16 +24,24 @@ $num = 100;
 $price = 25.66;
 $status = "paid";
 $valid = true;
+$country = ["Bangladesh", "India", "Japan", "Canada", "France", "Germany"];
+
+# echo $country . PHP_EOL; // It will throw an error
+
+print_r($country); // Use print_r() instead of echo while printing an array
 
 // Check data types
 echo gettype($num) . PHP_EOL; // output - integer
 echo gettype($price) . PHP_EOL; // output - double
 echo gettype($status) . PHP_EOL; // output - string
 echo gettype($valid) . PHP_EOL; // output - boolean
+echo gettype($country) . PHP_EOL; // output - array
 
+echo PHP_EOL;
 
 // Another way to Check data types
 var_dump($num) . PHP_EOL; // output - int(100)
 var_dump($price) . PHP_EOL; // output - float(25.66)
 var_dump($status) . PHP_EOL; // output - string(4) "paid", here 4 means length of the string
 var_dump($valid) . PHP_EOL; // output - bool(true)
+var_dump($country) . PHP_EOL; // output - array(6) readable form
