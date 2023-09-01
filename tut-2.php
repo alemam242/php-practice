@@ -28,3 +28,17 @@ echo PHP_VERSION . PHP_EOL; // print the running php version
 echo __FILE__ . PHP_EOL; // print the file path
 echo __LINE__ . PHP_EOL; // print the line number
 echo __DIR__ . PHP_EOL; // print the directory
+
+
+// Variable variables
+$name = "Buzz";
+
+$$name = "Barry"; // same as $Buzz = "Barry";
+
+echo $name . " " . $Buzz . PHP_EOL; // This is not right way to print
+
+echo $name . " " . $$name . PHP_EOL; // Use this instead
+
+echo "$name $$name" . PHP_EOL; // Output- Buzz $Buzz
+
+echo "$name {$$name}" . PHP_EOL; // Output Buzz Barry
